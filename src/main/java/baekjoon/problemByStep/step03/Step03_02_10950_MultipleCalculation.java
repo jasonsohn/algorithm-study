@@ -10,7 +10,6 @@ import java.util.Scanner;
  * 출력 : 각 테스트 케이스마다 A+B를 출력한다.
  */
 public class Step03_02_10950_MultipleCalculation {
-
     public static void main(String[] args) {
         inputData();
     }
@@ -18,7 +17,13 @@ public class Step03_02_10950_MultipleCalculation {
     public static void inputData() {
         Scanner scanner = new Scanner(System.in);
         int step = scanner.nextInt();
-        startCalculation(step);
+        for (int i = 0; i < step; i++) {
+            int operand1 = scanner.nextInt();
+            int operand2 = scanner.nextInt();
+            System.out.println(operand1 + operand2);
+        }
+//        startCalculation(step, operand1, operand2);
+//        startCalculation(step);
     }
 
     public static void startCalculation(int step) {
@@ -26,6 +31,14 @@ public class Step03_02_10950_MultipleCalculation {
         for (int i = 0; i < step; i++) {
             int operand1 = scanner.nextInt();
             int operand2 = scanner.nextInt();
+            int result = operand1 + operand2;
+            System.out.println(result);
+        }
+    }
+
+    public static void startCalculation(int step, int operand1, int operand2) {
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < step; i++) {
             int result = operand1 + operand2;
             System.out.println(result);
         }
